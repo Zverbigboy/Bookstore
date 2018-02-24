@@ -1,0 +1,261 @@
+body{
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+header{
+    background: url("../images/background.jpg") no-repeat center top / cover;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100%;
+    height: 30px;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+.registration {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    border-bottom: 5px solid #ffdb3a;
+}
+
+
+.container{
+    color: forestgreen;
+    width: 900px;
+    margin: 0 auto;
+}
+
+/*.input-requirements {*/
+    /*font-size: 1.3rem;*/
+    /*font-style: italic;*/
+    /*text-align: left;*/
+    /*list-style: disc;*/
+    /*list-style-position: inside;*/
+    /*max-width: 400px;*/
+    /*margin: 10px auto;*/
+    /*color: rgb(150,150,150);*/
+/*}*/
+
+
+/*.input-requirements li.invalid {*/
+    /*color: #e74c3c;*/
+/*}*/
+/*.input-requirements li.valid {*/
+    /*color: #2ecc71;*/
+/*}*/
+
+/*.input-requirements li.valid:after {*/
+    /*display: inline-block;*/
+    /*padding-left: 10px;*/
+    /*content: "\2713";*/
+/*}*/
+
+.logout{
+    float: left;
+    left: 10px;
+    margin-left: 10px;
+}
+
+.listOrderBookAdmin{
+    float: right;
+    right: 5px;
+    margin-right: 10px;
+}
+
+.adminMenuAddBook{
+    right: 10px;
+    margin-right: 25px;
+}
+
+
+#rightHeader{
+    right: 0px;
+    top: 10px;
+}
+
+.footer{
+    background: gray;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+
+.menu_list{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.menu_list_item{
+    font-size: 14px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.menu_list_link{
+    color: red;
+    display: block;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+}
+th {
+    background: #BCEBDD;
+    color: dodgerblue;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+td {
+    padding: 10px 20px;
+    background: #F8E391;
+}
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+tr td:last-child {
+    border-right: none;
+}
+
+/*таблицы для админа*/
+.table_blur {
+    background: #f5ffff;
+    border-collapse: collapse;
+    text-align: left;
+}
+.table_blur th {
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+    background: linear-gradient(forestgreen, darkgreen);
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+}
+.table_blur th:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.table_blur tr:nth-child(odd) {
+    background: #ebf3f9;
+}
+.table_blur th:first-child {
+    border-left: 1px solid #777777;
+    border-bottom:  1px solid #777777;
+    box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur th:last-child {
+    border-right: 1px solid #777777;
+    border-bottom:  1px solid #777777;
+    box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur td {
+    border: 1px solid #e3eef7;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.table_blur tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #a09f9d;
+}
+.table_blur tbody:hover tr:hover td {
+    color: #444444;
+    text-shadow: none;
+}
+
+/*конец таблицы для админа*/
+
+/*начало бутона Make an order*/
+input.button4 {
+    position: relative;
+    display: inline-block;
+    font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+    margin-top: 15px;
+}
+input.button4:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+input.button4:active {
+    top: 1px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+
+/*конец бутона Make an order*/
+
+

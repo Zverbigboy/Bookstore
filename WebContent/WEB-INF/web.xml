@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Books Management Web Application</display-name>
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<param-name>jdbcURL</param-name>
+		<param-value>jdbc:mysql://localhost:3306/bookstore</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcUsername</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcPassword</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>log4j-config</param-name>
+		<param-value>WEB-INF/log4j.xml</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>com.s3k3l3v.bookstore.controller.Controller</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/controller</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/Error.jsp</location>
+	</error-page>
+
+	<listener>
+		<listener-class>com.s3k3l3v.bookstore.listener.AppContextListener</listener-class>
+	</listener>
+
+
+	<filter>
+		<filter-name>FilterEncoding</filter-name>
+		<filter-class>com.s3k3l3v.bookstore.filter.FilterEncoding</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FilterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+		<servlet-name>Controller</servlet-name>
+	</filter-mapping>
+
+	<!--<filter>-->
+		<!--<filter-name>CommandAccessFilter</filter-name>-->
+		<!--<filter-class>com.s3k3l3v.bookstore.filter.AuthenticationFilter</filter-class>-->
+		<!--<init-param>-->
+			<!--<param-name>admin</param-name>-->
+			<!--<param-value>adminMenu</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>client</param-name>-->
+			<!--<param-value>listBookClient</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>librarian</param-name>-->
+			<!--<param-value>listOrderBookForLibrarian</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>common</param-name>-->
+			<!--<param-value>logout noCommand viewSettings</param-value>-->
+		<!--</init-param>-->
+		<!--<init-param>-->
+			<!--<param-name>out-of-control</param-name>-->
+			<!--<param-value>login</param-value>-->
+		<!--</init-param>-->
+	<!--</filter>-->
+
+	<!--<filter-mapping>-->
+		<!--<filter-name>CommandAccessFilter</filter-name>-->
+		<!--<servlet-name>Controller</servlet-name>-->
+	<!--</filter-mapping>-->
+
+
+</web-app>
